@@ -1,0 +1,1 @@
+["sbt.Task[scala.collection.immutable.Map[java.lang.String, scala.collection.Seq[scala.Tuple2[java.nio.file.Path, sbt.nio.FileStamp]]]]",{"2.13.2":{"hashes":[["/Users/kpoond/Documents/dev/PaceCalculator/src/main/scala/PaceCalculatorMain.scala","f82fb02e63e1b27114b3ff44232a6fe681096a22"]],"lastModifiedTimes":[]}}]
