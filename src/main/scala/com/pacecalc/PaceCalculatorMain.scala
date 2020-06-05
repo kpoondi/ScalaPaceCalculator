@@ -5,7 +5,9 @@ import akka.http.scaladsl.Http
 import akka.http.scaladsl.model._
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
+import com.pacecalc.PaceCalculatorMain.{Pace, Response}
 import spray.json.DefaultJsonProtocol._
+
 import scala.io.StdIn
 
 
@@ -15,9 +17,9 @@ class PaceCalculatorMain {
     implicit val system = ActorSystem("my-system")
     implicit val executionContext = system.dispatcher
 
-    final case class Pace(hour :Int, minute :Int, seconds: Int)
 
     implicit val paceFormat = jsonFormat3(Pace)
+    implicit val responseFormat = jsonFormat3(Response)
 
     def resolvePace(paceDouble :Double) :Int = {
       paceDouble match {
@@ -26,7 +28,7 @@ class PaceCalculatorMain {
       }
     }
 
-    def calcPace(hours: Int, minutes :Int, seconds :Int, distance :Double) :Pace = {
+    def calcPace(hours: Int, minutes :Int, seconds :Int, distance :Double, id: String) :Response = {
       val totalMins = hours * 60 + minutes + (seconds / 60)
 
       val doublePace = totalMins / distance
@@ -35,14 +37,23 @@ class PaceCalculatorMain {
       val paceMin = (doublePace - (paceHour * 60)).toInt
       val paceSec = (((doublePace - (paceHour * 60)) - (paceMin)) * 60).toInt
 
-      Pace(paceHour, paceMin, paceSec)
+      Response(Pace(paceHour, paceMin, paceSec), distance, id)
     }
 
     val calcPaceRoute =
-      path("pace" / IntNumber / IntNumber / IntNumber / DoubleNumber) { (hour, min, sec, distance) =>
-        get {
-          complete(calcPace(hour, min, sec, distance))
-        }
+      path("pace") {
+        concat(
+          post {
+            parameter("hour".as[Int], "min".as[Int], "sec".as[Int], "distance".as[Double], "id".as[String]) { (hour, min, sec, miles, id) =>
+              complete(calcPace(hour, min, sec, miles, id))
+            }
+          },
+          get {
+            parameter("id".as[String]) { id =>
+              complete(???)
+            }
+          }
+        )
       }
 
     val bindingFuture = Http().bindAndHandle(calcPaceRoute , "localhost", 8080)
@@ -55,5 +66,8 @@ class PaceCalculatorMain {
 }
 
 object PaceCalculatorMain extends PaceCalculatorMain with App {
+  case class Pace(hour :Int, minute :Int, seconds: Int)
+  final case class Response(pace: Pace, distance: Double, id: String)
+
   run()
 }

@@ -1,1 +1,1 @@
-["sbt.Task[scala.collection.Seq[scala.Tuple2[java.nio.file.Path, sbt.nio.FileStamp]]]",{"hashes":[["/Users/kpoond/Documents/dev/PaceCalculator/build.sbt","b52e6858866335681476a8c21025185522b12376"]],"lastModifiedTimes":[]}]
+["sbt.Task[scala.collection.Seq[scala.Tuple2[java.nio.file.Path, sbt.nio.FileStamp]]]",{"hashes":[["/Users/kpoond/Documents/dev/PaceCalculator/build.sbt","66e7c8c6d2388320470a499713371ceae6061a6f"]],"lastModifiedTimes":[]}]

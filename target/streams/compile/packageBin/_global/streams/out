@@ -1,17 +1,1 @@
-[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/kpoond/Documents/dev/PaceCalculator/target/scala-2.13/akka-http-quickstart-scala_2.13-0.1.0-SNAPSHOT.jar ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	com[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/kpoond/Documents/dev/PaceCalculator/target/scala-2.13/classes/com[0m
-[0m[[0m[0mdebug[0m] [0m[0m	com/pacecalc[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/kpoond/Documents/dev/PaceCalculator/target/scala-2.13/classes/com/pacecalc[0m
-[0m[[0m[0mdebug[0m] [0m[0m	com/pacecalc/PaceCalculatorMain$Pace$2$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/kpoond/Documents/dev/PaceCalculator/target/scala-2.13/classes/com/pacecalc/PaceCalculatorMain$Pace$2$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	com/pacecalc/PaceCalculatorMain$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/kpoond/Documents/dev/PaceCalculator/target/scala-2.13/classes/com/pacecalc/PaceCalculatorMain$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	com/pacecalc/PaceCalculatorMain$delayedInit$body.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/kpoond/Documents/dev/PaceCalculator/target/scala-2.13/classes/com/pacecalc/PaceCalculatorMain$delayedInit$body.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	com/pacecalc/PaceCalculatorMain.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/kpoond/Documents/dev/PaceCalculator/target/scala-2.13/classes/com/pacecalc/PaceCalculatorMain.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	com/pacecalc/PaceCalculatorMain$Pace$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/kpoond/Documents/dev/PaceCalculator/target/scala-2.13/classes/com/pacecalc/PaceCalculatorMain$Pace$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
+[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /Users/kpoond/Documents/dev/PaceCalculator/target/scala-2.13/akka-http-quickstart-scala_2.13-0.1.0-SNAPSHOT.jar[0m
